@@ -1,0 +1,359 @@
+
+:root {
+    --blue: #1fa2f1;
+    --lightblue: #9BD1F9;
+    --buttonHoverBg: #d4edff;
+    --valueback:rgba(212,237,255,0.6);
+    --lightgrey:rgb(230,236,240);
+    --space:50px;
+    --textgrey:rgb(101,119,134);
+    --textgreybutton:rgba(0,0,0,0.34);
+    --red :rgb(226,34,94);
+    --redbackground :rgba(226,34,94,0.1);
+    --green :rgb(23,191,99);
+    --greenbackground :rgba(23,191,99,0.1);
+
+}
+
+h1{
+    font-size: 19px;
+    font-weight: 800;
+    margin: 0;
+}
+
+*{
+    outline: none !important;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+
+}
+
+nav {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   height: 100%;
+}
+
+nav a {
+    display: block;
+    padding: 10px;
+    font-size: 30px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #212529;
+
+}
+
+
+nav a:nth-child(1) {
+    color: var(--blue)
+}
+
+nav a:hover {
+    background-color: var(--buttonHoverBg);
+    color: var(--blue);
+    border-radius:50% ;
+    
+}
+
+button{
+   
+    background-color: transparent;
+    border: none;
+    color: var(--textgreybutton);
+
+ } 
+
+ button i,
+ button span{
+    pointer-events: none;
+ }
+.mainsectioncontainer{
+    padding:0;
+   border-left:1px solid var(--lightgrey);
+    border-right:1px solid var(--lightgrey);
+    
+   display:flex;
+   flex-direction:column;
+}
+.titleContainer{
+    height: 53px;
+    padding:0 var(--space);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--lightgrey);
+    flex-shrink: 0; 
+}
+
+.titleContainer h1{
+    flex: 1;
+}
+.postFormContainer{
+    display: flex;
+    padding: var(--space);
+    border-bottom: 10px solid var(--lightgrey);
+    flex-shrink: 0;
+}
+.modal .postFormContainer{
+    border: none;
+    padding: 0;
+    padding-top:var(--space);
+}
+.userImageContainer{
+    width: 50px;
+    height: 50px;
+}
+.userImageContainer img{
+    width: 100%;
+    border-radius: 50px;
+    background-color: white ;
+}
+.textareaContainner {
+    flex: 1;
+    padding-left: var(--space);
+}
+
+.textareaContainner textarea{
+    width: 100%;
+    border: none;
+    resize: none;
+    font-size: 19px;
+}
+#submitpostButton{
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 7px 15px;
+}
+#submitpostButton:disabled{
+    background-color: var(--lightblue);
+}
+
+.post{
+    display: flex;
+    flex-direction:column;
+    padding: var(--space);
+    cursor: pointer;
+    border-bottom: 1px solid var(--textgrey);
+    flex-shrink: 0;
+}
+
+.mainContentContainer{
+    flex: 1;
+    display: flex;
+
+
+}
+
+.PostContainer{
+    padding-left: var(--space);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+}
+.modal .post{
+    padding: 0 0 var(--space) 0;
+}
+
+.username,
+.date{
+    color: var( --textgrey);
+}
+
+.PostBody{
+    padding-top: 5px;
+      font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+   
+}
+.name{
+    font-weight: bold;
+  margin: 0;
+}
+.Postfooter{
+    display: flex;
+    align-items: center;
+}
+.Postfooter .mainButtoncontainer{
+   
+    flex:1;
+    display:flex;
+ } 
+ .Postfooter .mainButtoncontainer button{
+   
+    padding: 0 5px;
+ } 
+ .postheader a:hover{
+    text-decoration: underline;
+ }
+ .postheader a,
+ .postheader span{
+    padding-right:5px;
+ }
+
+ .mainButtoncontainer button:hover{
+    background-color: var(--buttonHoverBg);
+    color: var(--blue);
+    border-radius:50% ;
+ }
+
+ .mainButtoncontainer.red button.active{
+    color: var(--red);
+ }
+ 
+ .mainButtoncontainer.green button.active{
+    color: var(--green);
+    
+ }
+ .mainButtoncontainer.red button:hover{
+    color: var(--red);
+    background-color: var(--redbackground);
+ }
+ 
+ 
+ .mainButtoncontainer.green button:hover{
+    color: var(--green);
+    background-color: var(--greenbackground);
+ }
+
+ .PostActionContainer{
+    padding-left: 35px;
+    font-size: 15px;
+    color: var(--textgrey);
+    margin-bottom: 10px;
+ }
+
+.replyFlag{
+    margin-bottom: 5px;
+}
+.replyFlag a{
+    color: var(--blue);
+}
+
+.PostContainer .header{
+    display: flex;
+}
+
+.PostContainer .header .date{
+    flex:1;
+}
+.profileHeader .coverPhoto{
+    height: 188px;
+    background-color: var(--blue);
+    position: relative;
+}
+
+.profileHeader .userImage{
+    height: 132px;
+    width: 132px;
+    margin-left: var(--space);
+    position: absolute;
+    bottom: -66px;
+}
+
+.profileHeader .userImage img{
+    width: 100%;
+    border-radius: 50px;
+  border: 4px solid #fff;
+}
+
+ .ProfileButtonContainer{
+    text-align: right;
+    padding: var(--space);
+    min-height: 66px;
+}
+
+.profileButton ,
+.follow{
+    border: 1px solid   var(--blue);
+    color: var(--blue);
+    font-weight: bold;
+    padding: 5px 15px;
+     border-radius: 68px;  
+     /* display: inline-block; */
+     margin-left: var(--space);  
+}
+.profileButton:hover,       
+.follow:hover{
+    background-color: var(--valueback);
+}
+
+.userinfo{
+    display: flex;
+    flex-direction: column;
+     padding: 0 var(--space);
+  margin-bottom:10px;
+}
+.displayName{
+ font-weight:bold;
+ margin-bottom:4px;
+}
+
+.followerscontainer{
+ margin-left:50px;
+ margin-bottom:20px;
+ 
+}
+.followerscontainer .value{
+ font-weight:bold;
+ margin-right:5px;
+}
+
+.followerscontainer span:not(.value){
+ color:var(--greytext);
+ 
+}
+
+.followerscontainer a{
+ margin-right:15px;
+}
+
+.followerscontainer a:hover{
+ border-bottom: 1px solid #000;
+}
+
+.tabsContainer{
+    display: flex;
+    border-bottom: 1px solid var(--lightgrey);
+    flex-shrink: 0;
+}
+.Tab{
+    flex:1;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--greytext);
+    font-weight: bold;
+
+}
+
+.Tab.active{
+    color: var(--blue);
+    border-bottom: 1px solid var(--blue);
+}
+
+.Tab:hover{
+    color: var(--blue);
+    background-color: var(--valueback);
+}
+
+.ProfileButtonContainer .following{
+    background-color:var(--blue);
+    color:#fff;
+   }

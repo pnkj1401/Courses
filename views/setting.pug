@@ -1,0 +1,24 @@
+extends layouts/main-layout.pug
+
+block content
+    h1 Settings
+    form(action="/reset-password" method="POST")
+      label(for="username") Username:
+      input(type="text" name="username" value=username required)
+      label(for="securityQuestion") Security Question:
+      select(name="securityQuestion" value=securityQuestion required)
+            option(value="What is your mother's maiden name?") What is your mother's maiden name?
+            option(value="What was the name of your first pet?") What was the name of your first pet?
+            option(value="In which city were you born?") In which city were you born?
+      label(for="securityAnswer") Security Answer:
+      input(type="text" name="securityAnswer" value=securityAnswer required)
+      label(for="newPassword" ) New Password:
+      input(type="password" name="newPassword" value=newPassword required)
+      input(type="submit", value="resetPasswordButton" , id="resetPasswordButton")
+      
+ 
+
+   
+
+block scripts
+    script(src="/js/setting.js")

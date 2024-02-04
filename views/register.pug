@@ -1,0 +1,37 @@
+extends layouts/login-layout.pug
+
+block content
+    .loginform
+        form#registerForm( method="post", onsubmit="event.preventDefault(); validateForm();") 
+            h1 registerform
+            p.errorMessage #{errorMessage}
+            input(type="text", name="firstname" , placeholder="firstname",value=firstname required="")
+            input(type="text", name="lastname" , placeholder="lastname",value=lastname required="")
+            input(type="text", name="username" , placeholder="username",value=username required="")
+            input(type="email", name="email" , placeholder="email",value=email required="")
+            input#password(type="password", name="password", placeholder="password",value=password required="")
+            input#chkpassword(type="password", name="chkpassword", placeholder="confirm password", required="")
+            //- label(for="securityQuestion") Security Question:
+            //- select(name="securityQuestion" value=securityQuestion required)
+            //-     option(value="What is your mother's maiden name?") What is your mother's maiden name?
+            //-     option(value="What was the name of your first pet?") What was the name of your first pet?
+            //-     option(value="In which city were you born?") In which city were you born?
+        
+            //- label(for="securityAnswer" ) Answer:
+            //- input(type="text" name="securityAnswer" value=securityAnswer required)
+            input(type="submit", value="login")
+        a(href="/login") already have an account ? Login Here
+    script. 
+        var password = document.getElementById("password");
+        var chkpassword = document.getElementById("chkpassword");
+        var form = document.getElementById("registerForm");
+
+        function validateForm(){
+        if(password.value != chkpassword.value)
+        {
+            alert(" password field values dont match")
+        }
+        else{
+            form.submit();
+        }
+        }
