@@ -57,11 +57,6 @@ const server = app.listen(port,()=>
 );
 
 
-app.get("/",middleware.requireLogin,(req,res,next) =>{
-    var payload = {
-        pagetitle : 'home',
-        userLogIn : req.session.user,
-        userLogInJS :JSON.stringify(req.session.user),
-    }
-    res.status(200).render("home",payload);
+app.get("/",(req,res,next) =>{
+    res.status(200).render("home");
 } )

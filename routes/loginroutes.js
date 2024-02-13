@@ -17,8 +17,7 @@ router.get("/",(req,res,next) =>{
 router.post("/",async (req,res,next) =>{
       var email = req.body.logusername.trim();
       var password = req.body.logpassword;
-      var payload = req.body ;
-      
+      var payload = req.body;
       if(req.body.logusername && req.body.logpassword){
             var user = await User.findOne({
                   $or:[
@@ -46,7 +45,8 @@ router.post("/",async (req,res,next) =>{
                   }
             
             }
-            payload.errorMessage ="Make Sure each field has specific value";
+      }
+      else{
             res.status(200).render("login",payload);
       }
 } )

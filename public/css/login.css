@@ -2,15 +2,19 @@ body{
     background-color: #09f;
 }
 .wrapper {
+    height: 850px;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
 }
 .loginform{
     padding: 20px;
     width: 80%;
+    height: 50%;
     max-width: 500px;
     border: 1px solid #dedede;
+    border-radius: 10%;
     background-color: #fff;
     text-align: center;
     box-shadow: 0 1px 4px rgba(0,0,0,0.3);
@@ -27,9 +31,9 @@ input[type="text"],
 input[type="email"],
 input[type="password"]{
     padding: 5px 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     border: 1px solid #dedede;
-    border-radius: 2px;
+    border-radius: 10px;
     background-color: #f2f2f2;
 }
 
@@ -37,6 +41,15 @@ input[type="submit"]{
     background-color: #09f;
     color: #fff;
     border: none;
-    border-radius: 2px;
-    margin-bottom: 10px;
+    width: 50%;
+    border-radius: 10px;
+    height: 40%;   
+    margin-top: 50px;
+}
+
+.loginbutton{
+    height: 100px;
+}
+.errorMessage{
+    margin-bottom: 30px;
 }
