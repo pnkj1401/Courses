@@ -60,3 +60,20 @@ mixin createTab(name, href, isSelected)
     - className = isSelected?"Tab active":"Tab"
     a(href=href, class=className)
         span #{name}
+
+
+mixin createCourseCard() 
+    div.course
+       img.courseImg(src='https://th.bing.com/th/id/OIG1.exU30042Ax8.KOJUFf8h?pid=ImgGn')
+       .courseHighlight
+          span.highlight abc
+          span.highlight abc 
+          span.highlight abc 
+          span.highlight abc
+       button.exploreBtn Explore Now
+                
+
+
+mixin createStudyMaterialCard() 
+    div.studyMaterial
+       span card       
