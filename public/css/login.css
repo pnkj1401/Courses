@@ -1,8 +1,8 @@
 body{
-    background-color: #09f;
+    background:linear-gradient(322deg, rgb(24 120 255),rgb(255 255 255));
 }
 .wrapper {
-    height: 850px;
+    height: 899px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@ body{
 .loginform{
     padding: 20px;
     width: 80%;
-    height: 50%;
+    height: 75%;
     max-width: 500px;
     border: 1px solid #dedede;
     border-radius: 10%;
@@ -25,6 +25,8 @@ body{
 form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 input[type="text"],
@@ -35,16 +37,20 @@ input[type="password"]{
     border: 1px solid #dedede;
     border-radius: 10px;
     background-color: #f2f2f2;
+    width:100%;
 }
-
+#needAccount{
+    margin-top: 25px;
+    display: block;
+}
 input[type="submit"]{
     background-color: #09f;
     color: #fff;
     border: none;
-    width: 50%;
-    border-radius: 10px;
-    height: 40%;   
-    margin-top: 50px;
+    width: 46%;
+    border-radius: 4px;
+    height: 42px;   
+    margin-top: 30px;
 }
 
 .loginbutton{
