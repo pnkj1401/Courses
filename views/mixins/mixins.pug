@@ -74,6 +74,6 @@ mixin createCourseCard()
                 
 
 
-mixin createStudyMaterialCard() 
-    div.studyMaterial
-       span card       
+mixin createStudyMaterialCard(content) 
+    div(class="studyMaterial", id=content.id)
+       span #{content.name}      

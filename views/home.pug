@@ -10,11 +10,8 @@ block content
       .sectionHeading 
          span Section Name
       section.studyMaterialSection
-        +createStudyMaterialCard()
-        +createStudyMaterialCard()
-        +createStudyMaterialCard()
-        +createStudyMaterialCard()
-        +createStudyMaterialCard()
+        each item in result 
+            +createStudyMaterialCard(item)
    .registerSection    
         .loginform
           form.loginForm( method="post" action="/login") 
