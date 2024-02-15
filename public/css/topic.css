@@ -1,0 +1,14 @@
+.topicPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;   
+}
+
+.topicDesc{
+    margin-left: 100px;
+}
+
+.sections{
+    margin-left: 100px;
+}

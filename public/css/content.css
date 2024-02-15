@@ -1,0 +1,17 @@
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contentHeading{
+    margin-top: 30px;
+}  
+
+.topics{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

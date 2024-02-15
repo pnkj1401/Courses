@@ -1,0 +1,15 @@
+extends layouts/main-layout.pug
+
+block links 
+    link(rel="stylesheet", href="/css/topic.css")
+
+block content
+    .topicPage
+      .topicName 
+          h1 #{result.topicName}
+      .topicDesc 
+          p #{result.topicDesc}
+      .sections      
+          each section in result.sections 
+             h3 #{section.sectionName}    
+             p #{section.sectionDesc}

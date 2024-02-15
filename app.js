@@ -7,14 +7,15 @@ const bodyparser = require("body-parser");
 const mongoose = require("./database");
 const multer = require('multer');
 const session = require("express-session");
-const content = require("./schemas/content")
+const content = require("./schemas/content");
+const Topic = require("./schemas/topic")
 
 app.set("view engine","pug");
 app.set("views","views");
 
 app.use(bodyparser.urlencoded({extended:false}));
-
 app.use(express.static(path.join(__dirname,"public")));
+app.use(express.json());
 
   
 
@@ -58,11 +59,60 @@ const server = app.listen(port,()=>
 );
 
 app.get("/",(req,res,next)=>{
-        content.find({})
+    content.find({})
         .then(result=>{
             res.status(200).render("home",{result});
         })
         .catch(error=>{
             res.status(300).render("home",{error});
         })
+    // const newTopic = new Topic({
+    //     topicName: "Introduction",
+    //     topicDesc: "Overview of Operating Systems",
+    //     sections: [{
+    //         sectionName: 'Section 1',
+    //         sectionDesc: 'Description for section 1'
+    //     }]
+    // });
+
+    // const newTopic1 = new Topic({
+    //     topicName: "Create Table",
+    //     topicDesc: "Overview of Operating Systems khdvj vsdjhv sdjhvhj dvjhc bds jshdcv jhvs vjh jhsv jhsj hhj  j ",
+    //     sections: [{
+    //         sectionName: 'Section 1',
+    //         sectionDesc: 'Description for section 1'
+    //     }]
+    // });
+
+    
+    // newTopic.save()
+    // .then(topic=> {
+    //     console.log("topic added");
+    // })
+    // .catch(error => {
+    //     console.log("Error adding sample content:")
+    // });
+
+    // newTopic1.save()
+    // .then(topic=> {
+    //     console.log("topic added");
+    // })
+    // .catch(error => {
+    //     console.log("Error adding sample content:")
+    // });
+
+
+    // const sampleContent = new content({
+    //     name: "Operating System",
+    //     topics: [newTopic._id,newTopic1._id]
+    // });
+    
+    // sampleContent.save()
+    // .then(savedContent => {
+    //     console.log("Sample content added:", savedContent);
+    // })
+    // .catch(error => {
+    //     console.error("Error adding sample content:", error);
+    // });
+       
 })

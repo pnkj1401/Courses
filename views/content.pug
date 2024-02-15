@@ -1,4 +1,16 @@
 extends layouts/main-layout.pug
 
+block links
+    link(rel="stylesheet", href="/css/content.css")
+
 block content 
-  p content page 
+
+     .content 
+        div.contentHeading 
+           h1 #{result.name}
+        .topics
+          each item in data
+           +createTopicList(item)
+
+block scripts
+    script(src="/js/content.js")           

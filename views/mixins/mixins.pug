@@ -71,9 +71,13 @@ mixin createCourseCard()
           span.highlight abc 
           span.highlight abc
        button.exploreBtn Explore Now
-                
 
 
 mixin createStudyMaterialCard(content) 
     div(class="studyMaterial", id=content.id)
        span #{content.name}      
+
+
+mixin createTopicList(topic)
+     .topicName 
+        p(id=topic.id) #{topic.topicName}
