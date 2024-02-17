@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const router = express.Router();
 const bodyparser = require("body-parser"); 
-const content = require("../schemas/content");
-const topic = require("../schemas/topic");
+const content = require("../schemas/contentSchema");
+const topic = require("../schemas/topicSchema");
 
 app.set("view engine","pug");
 app.set("views","views");
@@ -29,7 +29,7 @@ router.get("/topic",async (req,res,next)=>{
         const id = req.query.id;
         const result =await topic.findById(id)
         console.log(result);
-        res.status(200).render("topic",{result});
+        res.status(200).send(result);
     }
     catch(error){
         console.log("Internal Server Error:", error);

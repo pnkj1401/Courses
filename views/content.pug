@@ -4,13 +4,15 @@ block links
     link(rel="stylesheet", href="/css/content.css")
 
 block content 
-
-     .content 
+    .outer
+     .index 
         div.contentHeading 
            h1 #{result.name}
-        .topics
+        div.indexTopics
           each item in data
            +createTopicList(item)
-
+     .content   
+        
+     
 block scripts
     script(src="/js/content.js")           

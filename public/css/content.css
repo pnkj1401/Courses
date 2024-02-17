@@ -1,12 +1,24 @@
+.outer{
+    display: flex;
+}
+
+.index{
+    width:40%;
+    margin-top: 30px;
+    margin-left: 2%;
+}
+
 .content{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     flex-direction: column;
+    margin-top: 50px;
 }
 
 .contentHeading{
     margin-top: 30px;
+    display: flex;
 }  
 
 .topics{
@@ -15,3 +27,18 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+.topicName{
+    width: fit-content;
+}
+
+.topicName:hover{
+    background-color: var(--buttonHoverBg);
+    color: var(--blue);
+    border-radius: 5px;
+}
+
+.topicName.active{
+    color: var(--blue);
+}
+
