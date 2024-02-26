@@ -36,6 +36,7 @@ const resetpassword = require('./routes/resetpassworsroute');
 const settingroute = require('./routes/settingroutes'); 
 const uploadrouter = require('./routes/upload');
 const contentRouter = require('./routes/contentRoutes');
+const addTopic = require('./routes/topicRoutes');
 //api routes
 const postApiRoute = require('./routes/api/post');
 // const followApiRoute = require('./routes/followhandler');
@@ -52,6 +53,7 @@ app.use("/post",middleware.requireLogin,postpageroute);
 app.use("/profile",middleware.requireLogin,profilepageroute);
 app.use("/api/post",postApiRoute);
 app.use("/content",contentRouter)
+app.use("/topic",addTopic);
 // app.use("/upload",upload.single('image'), upload);
 
 const server = app.listen(port,()=>

@@ -21,7 +21,7 @@ router.get("/",(req,res,next) =>{
 
 
 router.post("/",async (req,res,next) =>{
-    
+    console.log(req.body);
     var firstname = req.body.firstname.trim();
     var lastname = req.body.lastname.trim();
     var username = req.body.username.trim();

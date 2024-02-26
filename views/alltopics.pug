@@ -1,0 +1,10 @@
+extends layouts/main-layout.pug
+
+block content
+      .mainwrapper 
+         each item in result 
+            .topic #{item.topicName}
+
+block scripts 
+   script(src="/js/alltopics.js") 
+   

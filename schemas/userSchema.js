@@ -14,6 +14,7 @@ const userschema = new Schema({
     // uploads:{type: String},
     likes:[{type:Schema.Types.ObjectId, ref :'Post'}],
     retweets:[{type:Schema.Types.ObjectId, ref :'Post'}],
+    isAdmin:{type:Boolean}
     // following:[{type:Schema.Types.ObjectId, ref :'user'}],
     // followers:[{type:Schema.Types.ObjectId, ref :'user'}]
     
